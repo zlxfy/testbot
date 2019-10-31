@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js');
-var token = "NjM4NTY5NDYxMzc2MzUyMjY2.XbeoQg.pprnFAO5R1DoyWEPW6Dqri7kptI"
+var token = process.env.TOKEN;
 var prefix = "/"
 var eightball = [ // sets the answers to an eightball
     "Ouiiii ",
@@ -14,7 +14,7 @@ var eightball = [ // sets the answers to an eightball
     "heuuuu",
 ];
 
-client.login(token);
+client.login(TOKEN);
 
 client.on('ready' , () => {
       console.log("Je suis connecté")
