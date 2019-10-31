@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js');
-var token = process.env.TOKEN;
+const TOKEN = process.env.TOKEN;
 var prefix = "/"
 var eightball = [ // sets the answers to an eightball
     "Ouiiii ",
