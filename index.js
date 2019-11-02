@@ -103,7 +103,7 @@ message.channel.send({ embed });
  
  if (message.content.startsWith(prefix + `mute`)) {
     let user = message.mentions.members.first();
-    let role = message.guild.roles.find('name', '😶• Mute');
+    let role = message.guild.roles.find('name', '『😶』Mute');
  
     if (!message.member.hasPermission('ADMINISTRATOR')) {
       const embed = new Discord.RichEmbed()
@@ -138,7 +138,7 @@ message.channel.send({ embed });
           message.channel.send({ embed: embed });
  
           const embed2 = new Discord.RichEmbed()
-          let DlogChannel = "logs-t4p"
+          let DlogChannel = "『🖨』𝙇𝙤𝙜𝙨-𝘽𝙊𝙏"
           const channel = user.guild.channels.find('name', DlogChannel);
           if (!channel) return;
           embed2.setAuthor(user.user.tag, user.user.avatarURL)
@@ -189,7 +189,7 @@ message.channel.send({ embed });
           message.channel.send({ embed: embed });
  
           const embed2 = new Discord.RichEmbed()
-          let DlogChannel = "logs-t4p"
+          let DlogChannel = "『🖨』𝙇𝙤𝙜𝙨-𝘽𝙊𝙏"
           const channel = user.guild.channels.find('name', DlogChannel);
           if (!channel) return;
           embed2.setAuthor(user.user.tag, user.user.avatarURL)
