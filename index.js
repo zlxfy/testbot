@@ -285,7 +285,7 @@ if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.se
  
    if (!message.guild) return;
   if (message.content.startsWith(prefix + "kick")) {
-if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.send(":warning: 𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐚 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐝'𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !)}
+if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.send(":warning: 𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐚 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐝'𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !")}
     const user = message.mentions.users.first();
     if (user) {
       const member = message.guild.member(user);
