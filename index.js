@@ -3,16 +3,7 @@ const client = new Discord.Client();
 const { Client, RichEmbed } = require('discord.js');
 const token = process.env.token;
 var prefix = "/"
-var eightball = [ // sets the answers to an eightball
-    "Ouiiii ",
-    "non...",
-    "pitetre",
-    "probablement",
-    "Sûrement pas",
-    "Neverrrrr",
-    "tu dois essayer...",
-    "heuuuu",
-];
+
 
 client.login(token);
 
@@ -28,7 +19,25 @@ client.on("guildMemberAdd" , user => {
 client.on('message' , message => {
 let args = message.content.split(" ").slice(1)
 
-
+if (message.content.startsWith('/8ball')) {
+    if ( message.content.endsWith('?')) {
+     var réponses = [ // sets the answers to an eightball 
+  "𝐎𝐮𝐢𝐢𝐢𝐢 ",
+    "𝐧𝐨𝐧...",
+    "𝐩𝐢𝐭𝐞𝐭𝐫𝐞",
+    "𝐩𝐫𝐨𝐛𝐚𝐛𝐥𝐞𝐦𝐞𝐧𝐭",
+    "𝐒𝐮̂𝐫𝐞𝐦𝐞𝐧𝐭 𝐩𝐚𝐬",
+    "𝐉𝐚𝐦𝐚𝐢𝐬 !",
+    "𝐭𝐮 𝐝𝐨𝐢𝐬 𝐞𝐬𝐬𝐚𝐲𝐞𝐫...",
+    "𝐡𝐞𝐮𝐮𝐮𝐮",
+];
+var réponse = réponses[Math.floor(Math.random() * réponses.length)];
+} else {
+	message.channel.sendMessage('𝐓𝐚 𝐪𝐮𝐞𝐬𝐭𝐢𝐨𝐧 𝐞𝐬𝐭 𝐢𝐧𝐯𝐚𝐥𝐢𝐝𝐞 ! 𝐀𝐣𝐨𝐮𝐭𝐞 𝐮𝐧 "?" 𝐚̀ 𝐥𝐚 𝐟𝐢𝐧.')
+     }
+     message.channel.sendMessage(réponse);
+     }
+     
       
    if (message.content.startsWith(prefix + 'verif')) {
             message.reply(` **${message.author.bot}**, **tu n'es pas un robot :p **`)
