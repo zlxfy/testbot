@@ -243,7 +243,7 @@ if (message.content === prefix + "help") {
     .setDescription(`𝐕𝐨𝐮𝐬 𝐩𝐨𝐮𝐯𝐞𝐳 𝐮𝐭𝐢𝐥𝐢𝐬𝐞𝐫 𝐦𝐞𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬 𝐚𝐯𝐞𝐜 𝐦𝐨𝐧 𝐩𝐫𝐞𝐟𝐢𝐱 "/" !`)
   
 	
-	.addField("__📌𝐌𝐨𝐝𝐞́𝐫𝐚𝐭𝐢𝐨𝐧𝐬 :__" , "```ban, kick, clear, suppr, warn, mute```")
+	.addField("__📌𝐌𝐨𝐝𝐞́𝐫𝐚𝐭𝐢𝐨𝐧𝐬 :__" , "```ban, kick, clear, suppr, warn, mute, unmute```")
    
 	.addField("__✨𝐅𝐮𝐧 :__", "```say, hello, leche, dance, 8ball```")
   
