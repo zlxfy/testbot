@@ -232,16 +232,16 @@ if (message.content === prefix + "help") {
 	.setThumbnail("https://cdn.discordapp.com/attachments/639133490926845999/639148357495029770/t4p.png")
     .setTitle('__𝐁𝐎𝐓 𝐃𝐄 𝐋𝐀 𝐓4𝐏 𝐕𝐎𝐈𝐂𝐈 𝐓𝐎𝐔𝐓𝐄𝐒 𝐌𝐄𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐄𝐒 :__')
     .setDescription("𝐕𝐨𝐮𝐬 𝐩𝐨𝐮𝐯𝐞𝐳 𝐮𝐭𝐢𝐥𝐢𝐬𝐞𝐫 𝐦𝐞𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬 𝐚𝐯𝐞𝐜 𝐦𝐨𝐧 𝐩𝐫𝐞𝐟𝐢𝐱 "/" !")
-  .addField()
-	.addField()
+  
+	
 	.addField("__📌𝐌𝐨𝐝𝐞́𝐫𝐚𝐭𝐢𝐨𝐧𝐬 :__" , "```ban, kick, clear, suppr, warn, mute```")
-   .addField()
+   
 	.addField("__✨𝐅𝐮𝐧 :__", "```say, hello, leche, dance, 8ball```")
-  .addField()
+  
 	.addField("__🛠️𝐔𝐭𝐢𝐥𝐢𝐭𝐚𝐢𝐫𝐞𝐬 :__", "```avatar, help, serverinfo, ui, pp, ping(du bot), verif```")
- .addField()
+ 
 	.addField("__🗡️𝐒𝐩𝐞́𝐜𝐢𝐚𝐥𝐞𝐬 :__", "```//, off, mpall```")
- .setTimestamp()
+
     .setFooter('𝐃𝐞́𝐯𝐞𝐥𝐨𝐩𝐩𝐞𝐮𝐫 :".𝐳𝐋𝐱𝐟𝐲')
     console.log("Commande d'aide demandée !")
     message.channel.send(Help)
