@@ -40,14 +40,14 @@ var réponse = réponses[Math.floor(Math.random() * réponses.length)];
      
       
    if (message.content.startsWith(prefix + 'verif')) {
-            message.reply(` **${message.author.bot}**, **tu n'es pas un robot :p **`)
+            message.reply(`__${message.author.bot}__, 𝐓𝐮 𝐧'𝐞𝐬 𝐩𝐚𝐬 𝐮𝐧 𝐫𝐨𝐛𝐨𝐭 :p`)
                 .then(() => console.log(`[C] A Command was successfully used by ${message.author.username}. The command was: ${message.content}  |  In: ${server.name}`))
                 .catch(error => console.log(error.stack));
         }
 
 
  if (message.content === prefix + 'ping') {
-    message.reply(`**Mon ping est de : ${Math.round(client.ping)}ms**`)
+    message.reply(`𝐌𝐨𝐧 𝐩𝐢𝐧𝐠 𝐞𝐬𝐭 𝐝𝐞 : __${Math.round(client.ping)} 𝐌𝐬__`)
       .then(() => console.log(`[C] ${message.author.username} used the ping command. In: ${server.name}`))
                 .catch(error => console.log(error.stack))
     }
@@ -104,7 +104,7 @@ message.channel.sendMessage("~(‾▿‾~)")
     const embed = new Discord.RichEmbed()
     embed.setFooter('Développeur : ".𝐳𝐋𝐱𝐟𝐲')
     embed.setColor(000000)
-    embed.addField("mmmmmmm, ", message.author + " viens de lécher " + member + "...", true);
+    embed.addField("𝐇𝐦𝐦, ", message.author + " viens de lécher " + member, true);
     embed.setThumbnail("https://i.imgur.com/mxOEBUM.gif")
     embed.setTimestamp()
 message.channel.send({ embed });
@@ -116,7 +116,7 @@ message.channel.send({ embed });
  
     if (!message.member.hasPermission('ADMINISTRATOR')) {
       const embed = new Discord.RichEmbed()
-      embed.addField("Error", `:warning: **Vous n'avez pas la permission d'effectuer cette commande !**`, true);
+      embed.addField("Error", `:warning: 𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐚 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐝'𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !`, true);
       embed.setFooter(prefix + "mute", client.user.avatarURL)
       embed.setColor(000000)
       embed.setTimestamp()
@@ -132,7 +132,7 @@ message.channel.send({ embed });
      } else {
        if (!user) {
          const embed = new Discord.RichEmbed()
-         embed.addField("Error", `*__ :warning: Veuillez mentionner un utilisateur à Mute !__*`, true);
+         embed.addField("Error", `:warning: 𝐕𝐞𝐮𝐢𝐥𝐥𝐞𝐳 𝐦𝐞𝐧𝐭𝐢𝐨𝐧𝐧𝐞𝐫 𝐮𝐧𝐞 𝐩𝐞𝐫𝐬𝐨𝐧𝐧𝐞 𝐚̀ 𝐌𝐮𝐭𝐞 !`, true);
           embed.setFooter(prefix + "mute ", client.user.avatarURL)
           embed.setColor(000000)
           embed.setTimestamp()
@@ -140,7 +140,7 @@ message.channel.send({ embed });
         } else {
           user.addRole(role)
           const embed = new Discord.RichEmbed()
-          embed.addField("Success", `**${user.user.tag}** *__a bien été Mute !__*`,  true);
+          embed.addField("Success", `__${user.user.tag}__ 𝐚 𝐛𝐢𝐞𝐧 𝐞́𝐭𝐞́ 𝐌𝐮𝐭𝐞 !`,  true);
           embed.setFooter(prefix + "mute", client.user.avatarURL)
           embed.setColor(000000)
           embed.setTimestamp()
@@ -151,8 +151,8 @@ message.channel.send({ embed });
           const channel = user.guild.channels.find('name', DlogChannel);
           if (!channel) return;
           embed2.setAuthor(user.user.tag, user.user.avatarURL)
-          embed2.setDescription(`**Moderator**: \`${message.author.tag}\``)
-          embed2.setFooter("User muted", client.user.avatarURL)
+          embed2.setDescription(`𝐌𝐨𝐝𝐞́𝐫𝐚𝐭𝐞𝐮𝐫 : \`${message.author.tag}\``)
+          embed2.setFooter("𝐔𝐭𝐢𝐥𝐢𝐬𝐚𝐭𝐞𝐮𝐫 𝐌𝐮𝐞𝐭 :", client.user.avatarURL)
           embed2.setColor(000000)
           embed2.setTimestamp()
           channel.send({ embed: embed2 });
@@ -168,7 +168,7 @@ message.channel.send({ embed });
  
     if (!message.member.hasPermission('ADMINISTRATOR')) {
       const embed = new Discord.RichEmbed()
-      embed.addField("Error", `*__:warning: Vous n'avez pas la permission d'effectuer cette commande__*`, true);
+      embed.addField("Error", `:warning: 𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐚 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐝'𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !`, true);
       embed.setFooter(prefix + "warn", client.user.avatarURL)
       embed.setColor(000000)
       embed.setTimestamp()
@@ -176,7 +176,7 @@ message.channel.send({ embed });
     } else {
        if (!user) {
         const embed = new Discord.RichEmbed()
-        embed.addField("Error", `*__:warning: Vous n'avez pas mentionné d'utilisateur à warn__*`, true);
+        embed.addField("Error", `:warning: 𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐦𝐞𝐧𝐭𝐢𝐨𝐧𝐧𝐞́ 𝐝𝐞 𝐩𝐞𝐫𝐬𝐨𝐧𝐧𝐞 𝐚̀ 𝐰𝐚𝐫𝐧 !`, true);
        embed.setFooter(prefix + "warn", client.user.avatarURL)
        embed.setColor(000000)
        embed.setTimestamp()
@@ -184,14 +184,14 @@ message.channel.send({ embed });
      } else {
        if (!args) {
          const embed = new Discord.RichEmbed()
-         embed.addField("Error", `*__:warning: Il faut une raison pour le warn !__*`, true);
+         embed.addField("Error", `:warning: 𝐈𝐥 𝐟𝐚𝐮𝐭 𝐮𝐧𝐞 𝐫𝐚𝐢𝐬𝐨𝐧 𝐩𝐨𝐮𝐫 𝐥𝐞 𝐰𝐚𝐫𝐧 !`, true);
           embed.setFooter(prefix + "warn", client.user.avatarURL)
           embed.setColor(000000)
           embed.setTimestamp()
           message.channel.send({ embed: embed });
         } else {
           const embed = new Discord.RichEmbed()
-          embed.addField("Success", `**${user.user.tag}** *__a bien été averti !__*`, true);
+          embed.addField("Success", `__${user.user.tag}__ 𝐚 𝐛𝐢𝐞𝐧 𝐞́𝐭𝐞́ 𝐚𝐯𝐞𝐫𝐭𝐢 !`, true);
           embed.setFooter(prefix + "warn", client.user.avatarURL)
           embed.setColor(000000)
           embed.setTimestamp()
@@ -202,7 +202,7 @@ message.channel.send({ embed });
           const channel = user.guild.channels.find('name', DlogChannel);
           if (!channel) return;
           embed2.setAuthor(user.user.tag, user.user.avatarURL)
-          embed2.setDescription(`**Moderator**: \`${message.author.tag}\`\n**Reason**: ${args}`)
+          embed2.setDescription(`𝐌𝐨𝐝𝐞́𝐫𝐚𝐭𝐞𝐮𝐫 : \`${message.author.tag}\`\n𝐑𝐚𝐢𝐬𝐨𝐧 : ${args}`)
           embed2.setFooter("User warned", client.user.avatarURL)
           embed.setColor(000000)
           embed2.setTimestamp()
@@ -216,7 +216,7 @@ if (message.content.startsWith(prefix + `serverinfo`)) {
     let m1user = message.guild.members.filter(b => !b.user.bot).size;
     let m2bot = message.guild.members.filter(b => b.user.bot).size;
     const embed = new Discord.RichEmbed()
-    embed.addField(`*__Informations du serveur :__*`, `**Nom**: \`${message.guild.name}\`\n**Fondateur**: \`${message.guild.owner.user.tag}\`\n**Membres**: \`${m1user}\`\n**Bots**: \`${m2bot}\`\n**Total**: \`${message.guild.memberCount}\``, true);
+    embed.addField(`__𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍𝐒 𝐒𝐔𝐑 𝐋𝐄 𝐒𝐄𝐑𝐕𝐄𝐔𝐑 :__`, `__𝐍𝐨𝐦 :__ \`${message.guild.name}\`\n__𝐅𝐨𝐧𝐝𝐚𝐭𝐞𝐮𝐫 :__ \`${message.guild.owner.user.tag}\`\n__𝐌𝐞𝐦𝐛𝐫𝐞𝐬 :__ \`${m1user}\`\n__𝐁𝐨𝐭𝐬 :__ \`${m2bot}\`\n__𝐓𝐨𝐭𝐚𝐥 :__\`${message.guild.memberCount}\``, true);
     embed.setColor(000000)
     embed.setFooter("T4P | Clan Builder", client.user.avatarURL)
     embed.setTimestamp()
@@ -230,14 +230,19 @@ if (message.content === prefix + "help") {
 	var Help = new Discord.RichEmbed()
 	.setColor("000000")
 	.setThumbnail("https://cdn.discordapp.com/attachments/639133490926845999/639148357495029770/t4p.png")
-    .setTitle('**_BOT de la T4P ! Voici toute mes commandes :_**')
-    .setDescription("**_Vous pouvez utiliser mes commandes avec mon prefix '/' !_**")
-    .addField("*__📌Modération :__*" , "```ban, kick, clear, suppr, av, warn, mute```")
-    .addField("*__✨Fun :__*", "```say, hello, leche, dance```")
-    .addField("*__🛠️Utilitaire :__*", "```avatar, help, serverinfo, ui, pp, ping(du bot), verif```")
-    .addField("*__🗡️Spéciales :__*", "```//, off, mpall```")
+    .setTitle('__𝐁𝐎𝐓 𝐃𝐄 𝐋𝐀 𝐓4𝐏 𝐕𝐎𝐈𝐂𝐈 𝐓𝐎𝐔𝐓𝐄𝐒 𝐌𝐄𝐒 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐄𝐒 :__')
+    .setDescription("𝐕𝐨𝐮𝐬 𝐩𝐨𝐮𝐯𝐞𝐳 𝐮𝐭𝐢𝐥𝐢𝐬𝐞𝐫 𝐦𝐞𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬 𝐚𝐯𝐞𝐜 𝐦𝐨𝐧 𝐩𝐫𝐞𝐟𝐢𝐱 "/" !")
+  .addField()
+	.addField()
+	.addField("__📌𝐌𝐨𝐝𝐞́𝐫𝐚𝐭𝐢𝐨𝐧𝐬 :__" , "```ban, kick, clear, suppr, warn, mute```")
+   .addField()
+	.addField("__✨𝐅𝐮𝐧 :__", "```say, hello, leche, dance, 8ball```")
+  .addField()
+	.addField("__🛠️𝐔𝐭𝐢𝐥𝐢𝐭𝐚𝐢𝐫𝐞𝐬 :__", "```avatar, help, serverinfo, ui, pp, ping(du bot), verif```")
+ .addField()
+	.addField("__🗡️𝐒𝐩𝐞́𝐜𝐢𝐚𝐥𝐞𝐬 :__", "```//, off, mpall```")
  .setTimestamp()
-    .setFooter('".𝐳𝐋𝐱𝐟𝐲')
+    .setFooter('𝐃𝐞́𝐯𝐞𝐥𝐨𝐩𝐩𝐞𝐮𝐫 :".𝐳𝐋𝐱𝐟𝐲')
     console.log("Commande d'aide demandée !")
     message.channel.send(Help)
     message.delete();
@@ -251,7 +256,7 @@ if (message.content === prefix + 'avatar') {
 
  if (!message.guild) return;
   if (message.content.startsWith(prefix + 'ban')) {
-if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.send("** :warning: Tu n'as pas la permission d'effectuer cette commande BG **")}
+if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.send(":warning: 𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐚 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐝'𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !")}
     const user = message.mentions.users.first();
     if (user) {
       
@@ -260,27 +265,27 @@ if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.se
       if (member) {
  
         member.ban({
-          reason: '**They were bad!**',
+          reason: '𝐈𝐥 𝐚 𝐞́𝐭𝐞́ 𝐛𝐚𝐧𝐧𝐢 !',
         }).then(() => {
          
-          message.reply(`**A bien banni ${user.tag} du serveur !**`);
+          message.reply(`𝐚 𝐛𝐢𝐞𝐧 𝐛𝐚𝐧𝐧𝐢 __${user.tag}__ 𝐝𝐮 𝐬𝐞𝐫𝐯𝐞𝐮𝐫 !`);
         }).catch(err => {
         
-          message.reply('**Je ne peut pas bannir ce membre !**');
+          message.reply('𝐉𝐞 𝐧𝐞 𝐩𝐞𝐮𝐱 𝐩𝐚𝐬 𝐛𝐚𝐧𝐧𝐢𝐫 𝐜𝐞𝐭𝐭𝐞 𝐩𝐞𝐫𝐬𝐨𝐧𝐧𝐞 !');
     
           console.error(err);
         });
       } else {
-        message.reply("**Cet utilisateur n'est pas dans le serveur**" );
+        message.reply("𝐂𝐞𝐭𝐭𝐞 𝐩𝐞𝐫𝐬𝐨𝐧𝐧𝐞 𝐧'𝐞𝐬𝐭 𝐩𝐚𝐬 𝐝𝐚𝐧𝐬 𝐥𝐞 𝐬𝐞𝐫𝐯𝐞𝐮𝐫 !" );
       }
     } else {
-      message.reply("** Tu n'as mentionné personne je peux pas le faire à ta place :p !!**");
+      message.reply("𝐕𝐞𝐮𝐢𝐥𝐥𝐞𝐳 𝐦𝐞𝐧𝐭𝐢𝐨𝐧𝐧𝐞𝐫 𝐮𝐧 𝐮𝐭𝐢𝐥𝐢𝐬𝐚𝐭𝐞𝐮𝐫 𝐚̀ 𝐛𝐚𝐧 !");
     }
   }
  
    if (!message.guild) return;
   if (message.content.startsWith(prefix + "kick")) {
-if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.send("** :warning: Tu n'as pas la permission d'effectuer cette commande BG **")}
+if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.send(":warning: 𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐚 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐝'𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !)}
     const user = message.mentions.users.first();
     if (user) {
       const member = message.guild.member(user);
@@ -288,17 +293,17 @@ if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.se
         
     member.kick('Optional reason that will display in the audit logs').then(() => {
    
-          message.reply(`**A bien exclu ${user.tag} du serveur !** `);
+          message.reply(`𝐚 𝐛𝐢𝐞𝐧 𝐞𝐱𝐜𝐥𝐮 __${user.tag}__ 𝐝𝐮 𝐬𝐞𝐫𝐯𝐞𝐮𝐫 !`);
         }).catch(err => {
 
-          message.reply("**Je ne peux pas kick ce membre !**");
+          message.reply("𝐉𝐞 𝐧𝐞 𝐩𝐞𝐮𝐱 𝐩𝐚𝐬 𝐤𝐢𝐜𝐤 𝐜𝐞𝐭𝐭𝐞 𝐩𝐞𝐫𝐬𝐨𝐧𝐧𝐞 !");
           console.error(err);
         });
       } else {
-        message.reply("**Cet utilisateur n'est pas dans le serveur !**");
+        message.reply("𝐂𝐞𝐭𝐭𝐞 𝐩𝐞𝐫𝐬𝐨𝐧𝐧𝐞 𝐧'𝐞𝐬𝐭 𝐩𝐚𝐬 𝐝𝐚𝐧𝐬 𝐥𝐞 𝐬𝐞𝐫𝐯𝐞𝐮𝐫 !");
       }
     } else {
-      message.reply('**Veuillez mentionner un utilisateur à kick !**');
+      message.reply('𝐕𝐞𝐮𝐢𝐥𝐥𝐞𝐳 𝐦𝐞𝐧𝐭𝐢𝐨𝐧𝐧𝐞𝐫 𝐮𝐧𝐞 𝐩𝐞𝐫𝐬𝐨𝐧𝐧𝐞 𝐚̀ 𝐤𝐢𝐜𝐤 !');
     }
   }
 
@@ -306,29 +311,25 @@ if (!message.member.hasPermission("ADMINISTRATOR"))  { return message.channel.se
        if(message.author.id !== "508347829169684491") { return message.channel.send(":warning: **vous n'avez pas la permission**")}
 message.channel.send("*__@everyone @e@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone @everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyoveryone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@everyone@ev__*")
 }
-if (message.content === prefix + "av"){
-if(!message.member.hasPermission("ADMINISTRATOR")) { return message.channel.send("Tu ne peux mas utiliser cette commande !")}
-message.delete()
-message.channel.send("**_ :warning:Ce n'est pas toléré ici ! La prochaine fois ce sera un warn ou un ban ! :warning:_**")
-}
+
 if(message.content === prefix + "hello"){
- 	message.channel.send ("**Heyy ^^**")}
+ 	message.channel.send ("__𝐇𝐞𝐲 ^^__")}
  if(message.content.includes(prefix + 'off')){
     if(message.author.id !== "508347829169684491") { return message.channel.send(":warning: **vous n'avez pas la permission**")}
         message.channel.send('**au revoir, snif :cry: . . .**')
         message.delete().then(client.destroy())
         } else if(message.content.startsWith(prefix + "suppr") || message.content.startsWith(prefix + "clear")) {
-                if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":warning: **Tu n'as pas les permissions pour effectuer cette commande BG**");
+                if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":warning: 𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐞𝐬 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧𝐬 𝐩𝐨𝐮𝐫 𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !");
                 
-               if(!args[0]) return message.channel.send("**Tu n'as pas défini le nombre de message que tu veux supprimer !**")
+               if(!args[0]) return message.channel.send("𝐕𝐞𝐮𝐢𝐥𝐥𝐞𝐳 𝐝𝐞́𝐟𝐢𝐧𝐢𝐫 𝐮𝐧 𝐧𝐨𝐦𝐛𝐫𝐞 𝐝𝐞 𝐦𝐞𝐬𝐬𝐚𝐠𝐞𝐬 𝐚̀ 𝐬𝐮𝐩𝐩𝐫𝐢𝐦𝐞𝐫 !")
             message.delete()
             message.channel.bulkDelete(args[0]).then(() => {
-            	message.channel.send(`${args[0]} **_messages ont été supprimés !_** `)
+            	message.channel.send(`__${args[0]}__ 𝐌𝐞𝐬𝐬𝐚𝐠𝐞𝐬 𝐨𝐧𝐭 𝐞́𝐭𝐞́ 𝐬𝐮𝐩𝐩𝐫𝐢𝐦𝐞́𝐬 !`)
            })
  } else if (message.content.startsWith(prefix + "say")) {
-             if(!message.member.hasPermission("ADMINISTRATOR")) { return message.channel.send  ("**_ :warning: Bien tenté mais tu n'as pas assez de skill_** ")}
+             if(!message.member.hasPermission("ADMINISTRATOR")) { return message.channel.send  (":warning: 𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐚 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐩𝐨𝐮𝐫 𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !")}
              let botmessage = args.join(" ");
-             if(!botmessage[0]) return message.channel.send( "** :x: Que veux-tu que je dise !**" ) ;
+             if(!botmessage[0]) return message.channel.send( "𝐐𝐮𝐞 𝐯𝐨𝐮𝐥𝐞𝐳 𝐯𝐨𝐮𝐬 𝐪𝐮𝐞 𝐣𝐞 𝐝𝐢𝐬𝐞 ?!" ) ;
              message.channel.send(botmessage);
              message.delete();
 }
@@ -337,16 +338,16 @@ if(message.content === prefix + "hello"){
        let UserInfo = message.mentions.members.first() || message.guild.members.get(args[0]) || message.member;
   let usericon = UserInfo.user.avatarURL;
  let userembed = new Discord.RichEmbed()
-.setDescription("information sur l'utilisateur")
+.setDescription("__𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍𝐒 𝐒𝐔𝐑 𝐋'𝐔𝐓𝐈𝐋𝐈𝐒𝐀𝐓𝐄𝐔𝐑 :__")
 .setColor("BLACK")
  .setThumbnail(usericon)
-  .addField("Nom d'utilisateur:", UserInfo.user.username)
-.addField("Tag:", UserInfo.user.tag)
-.addField("Status:", UserInfo.user.presence.status)
-.addField("Playing:", UserInfo.user.presence.game)
-.addField("Bot:", UserInfo.user.bot)
-.addField("rejoins le:", UserInfo.joinedAt)  .addField("compte crée le:", UserInfo.user.createdAt)
- .addField("ID:", UserInfo.id)
+  .addField("__𝐍𝐨𝐦 𝐝'𝐮𝐭𝐢𝐥𝐢𝐬𝐚𝐭𝐞𝐮𝐫 :__", UserInfo.user.username)
+.addField("__𝐓𝐚𝐠 :__", UserInfo.user.tag)
+.addField("__𝐒𝐭𝐚𝐭𝐮𝐬 :__", UserInfo.user.presence.status)
+.addField("__𝐄𝐧 𝐭𝐫𝐚𝐢𝐧 𝐝𝐞 𝐣𝐨𝐮𝐞𝐫 :__", UserInfo.user.presence.game)
+.addField("__𝐁𝐨𝐭𝐬 :__", UserInfo.user.bot)
+.addField("__𝐑𝐞𝐣𝐨𝐢𝐧𝐬 𝐥𝐞 :__", UserInfo.joinedAt) _ .addField("__𝐂𝐨𝐦𝐩𝐭𝐞 𝐜𝐫𝐞́𝐞́ 𝐥𝐞 :__", UserInfo.user.createdAt)
+ .addField("__𝐈𝐃 :__", UserInfo.id)
             return message.channel.send(userembed);
 }
 else if(message.content.startsWith(prefix +"pp")){
