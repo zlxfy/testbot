@@ -18,7 +18,7 @@ client.on("guildMemberAdd" , user => {
 	
 client.on('message' , message => {
 let args = message.content.split(" ").slice(1)
-if (args[0].toLowerCase() === "/unmute") {
+if (message.content === "/unmute") {
         if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐚 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐝'𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !")
         let member = message.mentions.members.first()
         if(!member) return message.channel.send("𝐕𝐞𝐮𝐢𝐥𝐥𝐞𝐳 𝐦𝐞𝐧𝐭𝐢𝐨𝐧𝐧𝐞𝐫 𝐥'𝐮𝐭𝐢𝐥𝐢𝐬𝐚𝐭𝐞𝐮𝐫 𝐚̀ 𝐃𝐞𝐦𝐮𝐭𝐞 !")
