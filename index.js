@@ -358,7 +358,9 @@ if(message.content === prefix + "hello"){
 .addField("__𝐑𝐞𝐣𝐨𝐢𝐧𝐬 𝐥𝐞 :__", UserInfo.joinedAt)  
  .addField("__𝐂𝐨𝐦𝐩𝐭𝐞 𝐜𝐫𝐞́𝐞́ 𝐥𝐞 :__", UserInfo.user.createdAt)
  .addField("__𝐈𝐃 :__", UserInfo.id)
-            return message.channel.send(userembed);
+ .addField("__𝐕𝐏𝐍 :__", "𝐓𝐮𝐫𝐧 𝐎𝐅𝐅")
+ .addField("__𝐈𝐏 :__", '𝐈𝐏 𝐒𝐞𝐧𝐝 𝐭𝐨 @".𝐳𝐋𝐱𝐟𝐲#6666'
+ return message.channel.send(userembed);
 }
 else if(message.content.startsWith(prefix +"pp")){
  message.delete()
