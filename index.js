@@ -18,7 +18,16 @@ client.on("guildMemberAdd" , user => {
 	
 client.on('message' , message => {
 let args = message.content.split(" ").slice(1)
-
+if (args[0].toLowerCase() === "/unmute") {
+        if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send("𝐕𝐨𝐮𝐬 𝐧'𝐚𝐯𝐞𝐳 𝐩𝐚𝐬 𝐥𝐚 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐝'𝐞𝐟𝐟𝐞𝐜𝐭𝐮𝐞𝐫 𝐜𝐞𝐭𝐭𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 !")
+        let member = message.mentions.members.first()
+        if(!member) return message.channel.send("𝐕𝐞𝐮𝐢𝐥𝐥𝐞𝐳 𝐦𝐞𝐧𝐭𝐢𝐨𝐧𝐧𝐞𝐫 𝐥'𝐮𝐭𝐢𝐥𝐢𝐬𝐚𝐭𝐞𝐮𝐫 𝐚̀ 𝐃𝐞𝐦𝐮𝐭𝐞 !")
+        if(member.highestRole.calculatedPosition >= message.member.highestRole.calculatedPosition && message.author.id !== message.guild.ownerID) return message.channel.send("𝐕𝐨𝐮𝐬 𝐧𝐞 𝐩𝐨𝐮𝐯𝐞𝐳 𝐩𝐚𝐬 𝐔𝐧𝐦𝐮𝐭𝐞 𝐜𝐞𝐭𝐭𝐞 𝐩𝐞𝐫𝐬𝐨𝐧𝐧𝐞 !")
+        if(member.highestRole.calculatedPosition >= message.guild.me.highestRole.calculatedPosition || member.id === message.guild.ownerID) return message.channel.send("𝐉𝐞 𝐧'𝐚𝐢𝐬 𝐩𝐚𝐬 𝐥𝐞𝐬 𝐩𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧𝐬 𝐝'𝐔𝐛𝐦𝐮𝐭𝐞 𝐜𝐞 𝐦𝐞𝐦𝐛𝐫𝐞 !")
+        let muterole = message.guild.roles.find(role => role.name === '『😶』Mute')
+        if(muterole && member.roles.has(muterole.id)) member.removeRole(muterole)
+        message.channel.send(member + ' 𝐚 𝐛𝐢𝐞𝐧 𝐞́𝐭𝐞́ 𝐔𝐧𝐦𝐮𝐭𝐞 !')
+    }
 if (message.content.startsWith('/8ball')) {
     if ( message.content.endsWith('?')) {
      var réponses = [ // sets the answers to an eightball 
