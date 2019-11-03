@@ -346,7 +346,8 @@ if(message.content === prefix + "hello"){
 .addField("__𝐒𝐭𝐚𝐭𝐮𝐬 :__", UserInfo.user.presence.status)
 .addField("__𝐄𝐧 𝐭𝐫𝐚𝐢𝐧 𝐝𝐞 𝐣𝐨𝐮𝐞𝐫 :__", UserInfo.user.presence.game)
 .addField("__𝐁𝐨𝐭𝐬 :__", UserInfo.user.bot)
-.addField("__𝐑𝐞𝐣𝐨𝐢𝐧𝐬 𝐥𝐞 :__", UserInfo.joinedAt) _ .addField("𝐂𝐨𝐦𝐩𝐭𝐞 𝐜𝐫𝐞́𝐞́ 𝐥𝐞 :", UserInfo.user.createdAt)
+.addField("__𝐑𝐞𝐣𝐨𝐢𝐧𝐬 𝐥𝐞 :__", UserInfo.joinedAt)  
+ .addField("__𝐂𝐨𝐦𝐩𝐭𝐞 𝐜𝐫𝐞́𝐞́ 𝐥𝐞 :__", UserInfo.user.createdAt)
  .addField("__𝐈𝐃 :__", UserInfo.id)
             return message.channel.send(userembed);
 }
